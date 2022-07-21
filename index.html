@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Agence Wob Pays Basque</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="images/logo-noir.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- <link href="/css/glightbox.css" rel="stylesheet">
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet"> -->
+
+
+
+
+    <style>
+        :root {
+            --wob-primary: #083e7c;
+            --wob-info: #da8d3b;
+            --wob-warning: coral;
+        }
+
+        /* Style the tab */
+        .tab {
+            /* float: left; */
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            /* width: 30%; */
+            /* min-height: 380px; */
+            padding: 0;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            display: block;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: var(--wob-info);
+            color: white;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: var(--wob-primary);
+            color: white;
+        }
+
+        /* Style the tab content */
+
+        button.tablinks {
+            font-size: 1rem;
+        }
+
+        /* input[type=checkbox] {
+            background-color: var(--wob-info);
+            border: none;
+        } */
+
+        /* input[type=checkbox]:checked {
+  background-color:var(--wob-primary);
+  } */
+
+        .form-check-input:focus {
+            box-shadow: none;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- ======= Calculator Section ======= -->
+    <section>
+        <div class="container">
+            <div class="row">
+
+                <!-- side menu for calculator -->
+                <div class="tab shadow-lg border-0 col-4 col-md-3">
+                    <h4 class="mb-4 ">Choisir la catégorie</h4>
+                    <button class="tablinks border-bottom" onclick="openPage(event, 'Projet')" id="defaultOpen">Gestion
+                        de
+                        Projet </button>
+                    <button class="tablinks border-bottom" onclick="openPage(event, 'Design')">Web
+                        Design</button>
+                    <button class="tablinks border-bottom" onclick="openPage(event, 'Sites')">Création
+                        Sites</button>
+                    <button class="tablinks border-bottom" onclick="openPage(event, 'Pub')">E-Publicité</button>
+                    <h4 class=" ps-2 pt-5">3. Total en €</h4>
+                    <p id="prixTotal" class="text-center fs-3"></p>
+                </div>
+                <!-- end of the side menu for calculator -->
+
+                <!-- products side -->
+                <div class="col-8 col-md-9 ">
+                    <div class="ms-1">
+                        <h4 class="mb-1">Sélectionner des besoins</h4>
+
+                        <!-- First service Project -->
+                        <div id="Projet" class="tabcontent py-4">
+                            <!-- <p>Gestion de Projet: Lorem ipsum dolor sit amet consectetur adipisicing elit. </p> -->
+
+                            <!-- first product -->
+                            <div class="card">
+                                <div class="work-content">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="checkbox" type="checkbox" id="static" value="static"
+                                                name="Static" />
+                                            <label for="static">
+                                                Site one page
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <span class="w-date"> 2000-3000€</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="single-produit.html"> <span class="bi bi-info-circle"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of first product -->
+                            <!-- second product -->
+                            <div class="card mt-4">
+                                <div class="work-content">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="checkbox" type="checkbox" id="specific" value="specific"
+                                                name="specific" />
+                                            <label for="specific">
+                                                Site spécifique
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <span class="w-date"> 3000-4000€</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="single-produit.html"> <span class="bi bi-info-circle"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of second product -->
+                            <!-- third product -->
+                            <div class="card mt-4">
+                                <div class="work-content">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="checkbox" type="checkbox" id="audit" value="audit"
+                                                name="audit" />
+                                            <label for="audit">
+                                                Audit de site
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <span class="w-date"> 1000-2000€</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="single-produit.html"> <span class="bi bi-info-circle"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of third product -->
+                            <!-- fourth product -->
+                            <div class="card mt-4">
+                                <div class="work-content">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="checkbox" type="checkbox" id="wordpress" value="wordpress"
+                                                name="wordpress" />
+                                            <label for="wordpress">
+                                                Site wordpress
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <span class="w-date"> 2000-3000€</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="single-produit.html"> <span class="bi bi-info-circle"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of fourth product -->
+
+                        </div>
+                        <!-- end of first service Project Design -->
+                        <!-- second service -->
+                        <div id="Design" class="tabcontent p-4 border-0">
+                            <p>Web Design: Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <div class="row">
+                                A compléter
+
+                            </div>
+                        </div>
+                        <!-- end of second service -->
+                        <!-- third service -->
+                        <div id="Sites" class="tabcontent p-4 border-0">
+                            <p>Création de Sites: Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <div class="row">
+                                A compléter
+
+                            </div>
+                        </div>
+                        <!-- end of third service -->
+                        <!-- fourth service -->
+                        <div id="Pub" class="tabcontent p-4 border-0">
+                            <p>E-publicité: Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <div class="row">
+                                A compléter
+
+                            </div>
+                        </div>
+                        <!-- end of fourth service -->
+                    </div>
+                </div>
+
+                <!-- cart -->
+                <div id="Panier" class="container tab shadow-lg border-0 p-2 p-lg-5 my-3">
+
+
+                    <div class="row px-1">
+                        <h4 class="mb-4 ">Détails des besoins</h4>
+                        <p id="listing"></p>
+                    </div>
+                    <!-- <div class="row">
+                            <h4 class=" mb-4 col-8">Montant estimé (en euros)</h4>
+                            <p id="prixTotal" class="text-md-center display-6 col-4"></p>
+                        </div> -->
+
+
+                    <section class="row py-4 px-1 ">
+                        <!-- <h4 class="mb-4 ">4. Enregistrer votre estimation</h4> -->
+                        <div class="col-12">
+                            <form action="">
+                                <label for="email" class="form-label">Entrez votre email pour garder
+                                    votre
+                                    estimation</label>
+                                <input type="email" name="email" id="email" class="form-control"
+                                    placeholder="Votre email">
+                                <a href="" id="recevoir" class="btn btn-primary text-light my-2 d-block">Recevoir
+                                    l'estimation</a>
+                            </form>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-6 d-flex">
+                                <a href="#calculator" class="btn btn-primary" id="vider">Réinitialiser</a>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <a href="contact.html" id="contact" class="btn btn-secondary">Nous
+                                    contacter</a>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                </div>
+                <!-- end of cart -->
+            </div>
+        </div>
+    </section><!-- End Calculator Section -->
+
+
+    <!-- contact form -->
+    <form class=" container form-group" method="post" action="contact-form-process.php">
+
+        <!-- <label for="your-name">Your name</label> -->
+        <input type="text" id="Name" name="Name" class="form-control" placeholder="Your name" required>
+
+        <!-- <label for="your-email">Your email address</label> -->
+        <input type="email" id="Email" name="E-mail" class="form-control" placeholder="Your email" required>
+
+        <!-- <label for="your-Message">Your message</label> -->
+        <textarea id="Message" name="Message" class="form-control" rows="6" maxlength="3000"
+            required> Your Message</textarea>
+
+        <button type="submit" id="fcf-button" class="btn btn-primary btn-lg btn-block">Send</button>
+    </form>
+
+
+
+    <script>
+        function openPage(evt, page) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(page).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+
+
+        // variables declaration
+        let prestations = {
+            "static": 2000,
+            "wordpress": 3000,
+            "specific": 4000,
+            "audit": 3000
+        }
+        let panier = {};
+
+        let listing = document.querySelector("#listing");
+        let prixTotal = document.querySelector("#prixTotal");
+        let vider = document.querySelector("#vider");
+        let enregistrer = document.querySelector("#enregistrer");
+
+
+        // functions
+        function afficherPanier(panier) {
+            let listPresta = "";
+            for (let presta in panier) {
+                listPresta += presta + " " + panier[presta] + "<br>"
+                listing.innerHTML = listPresta;
+            }
+        }
+
+        function afficherPrixTotal(panier) {
+            let prix = 0;
+            for (let presta in panier) {
+                prix += panier[presta];
+                prixTotal.innerHTML = prix;
+            }
+        }
+
+        function viderPanier() {
+            panier = {};
+            listing.innerHTML = "";
+            prixTotal.innerHTML = null;
+
+            let checkboxes = document.querySelectorAll('.checkbox');
+            for (let checkbox of checkboxes) {
+                checkbox.checked = false;
+            };
+        }
+
+        // eventListeners
+        for (let prestation in prestations) {
+            let inputName = prestation;
+            let inputPrice = prestations[prestation];
+            let input = document.querySelector("#" + inputName);
+
+            input.addEventListener("click", function () {
+                if (input.checked == true) {
+                    // on ajoute la prestation au panier
+                    panier[inputName] = inputPrice;
+                } else {
+                    // on retire la prestation du panier
+                    delete panier[inputName];
+                    listing.innerHTML = "";
+                    prixTotal.innerHTML = null;
+                }
+                console.log(panier);
+                // on affiche le panier détaillé
+                afficherPanier(panier);
+
+                // on affiche le prix total
+                afficherPrixTotal(panier);
+
+            })
+
+        }
+
+        // vider le panier
+        vider.addEventListener("click", function () {
+            viderPanier();
+        })
+
+        //recevoir la simulation par mail
+        recevoir.addEventListener("click", function () {
+            let email = document.querySelector("#email");
+            //  A CODER AVEC PHP
+        })
+
+    </script>
+
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
